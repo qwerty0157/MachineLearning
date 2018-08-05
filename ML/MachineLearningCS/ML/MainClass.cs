@@ -14,7 +14,7 @@ namespace ML
     {
         public static void Main(string[] args)
         {
-            var data = LoadData.LoadCsv<Iris, IrisMap>("iris.csv");
+            var data = LoadData.LoadCsv<Iris, IrisMap>("../../../../../InputData/IRIS.csv");
             var labelname = data.Select(x => x.Species).Distinct().ToArray();
 
             var feature = (from n in data select new double[] { n.PetalLength, n.PetalWidth, n.SepalLength, n.SepalWidth }).ToArray();
